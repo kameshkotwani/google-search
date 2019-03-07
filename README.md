@@ -1,6 +1,7 @@
 # Google Search
 A Simple Extension for VSCode to search easily using Google
 
+### If you use [bing](https://marketplace.visualstudio.com/items?itemName=kameshkotwani.bing-search), I have an extension for that too!
 # What is does:
 Well, if you are stuck in some confusion about what this or that line or this function does, then you can simply select the function or line you want and vola! you'll get instant search results for that query in your default web-browser without needing to type or copy the whole thing up!
 
