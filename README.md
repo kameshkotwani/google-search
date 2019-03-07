@@ -1,65 +1,22 @@
-# google-search README
+# Google Search
+A Simple Extension for VSCode to search easily using Google
 
-This is the README for your extension "google-search". After writing up a brief description, we recommend including the following sections.
+# What is does:
+Well, if you are stuck in some confusion about what this or that line or this function does, then you can simply select the function or line you want and vola! you'll get instant search results for that query in your default web-browser without needing to type or copy the whole thing up!
 
-## Features
+## How it works!
+Simply select the word or function you want to search, then right click and click on `Google it` in drop-down menu.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+# See it in Action
+#### when you select the text and right click you'll see `Google it` in your drop-down menu
 
-For example if there is an image subfolder under your extension project workspace:
+![drop-down-menu](https://github.com/kameshkotwani/google-search/blob/master/resources/drop-down-menu.png?raw=true)
 
-\!\[feature X\]\(images/feature-x.png\)
+## How it opens in browser
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![browser-query-results](https://github.com/kameshkotwani/google-search/blob/master/resources/search-results.png?raw=true)
 
-## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### If you encounter any issues, please let me know [here](https://github.com/kameshkotwani/google-search/issues)
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+#### This extension was made possible by [Ciprian Burca](https://github.com/burcadoruciprian)

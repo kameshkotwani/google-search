@@ -1,35 +1,66 @@
 {
-	"name": "google-search",
-	"displayName": "google-search",
-	"description": "Google your doubts, errors and confusions!",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.31.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld"
-	],
-	"main": "./extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
-	"scripts": {
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "node ./node_modules/vscode/bin/test"
-	},
-	"devDependencies": {
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28",
-		"eslint": "^5.13.0",
-		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
-	}
+  "name": "google-search",
+  "displayName": "google-search",
+  "description": "Google your doubts, errors and confusions!",
+  "version": "0.0.1",
+  "publisher": "kameshkotwani",
+  "engines": {
+    "vscode": "^1.31.0"
+  },
+  "author": {
+    "name": "Kamesh Kotwani",
+    "url": "https://www.github.com/kameshkotwani"
+  },
+  "icon": "resources/icon.png",
+  "homepage": "https://www.github.com/kameshkotwani/google-search",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/kameshkotwani/google-search"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.googleSearch"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "extension.googleSearch",
+          "group": "navigation"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "extension.googleSearch",
+        "title": "Google Search"
+      }
+    ],
+    "configuration": {
+      "title": "Google Search Config",
+      "type": "object",
+      "properties": {
+        "googleSearch.QueryTemplate": {
+          "type": "string",
+          "default": "https://www.google.com/search?q=%SELECTION%",
+          "description": "Search Query"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "eslint": "^5.13.0",
+    "@types/node": "^10.12.21",
+    "@types/mocha": "^2.2.42"
+  }
 }
