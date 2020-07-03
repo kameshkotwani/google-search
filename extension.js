@@ -21,24 +21,24 @@ exports.deactivate = deactivate;
 
 //Function to launch the Search URL in default browser
 function webSearch() {
-  var selectedText = GetSelectedText();
+  const selectedText = getSelectedText();
   if (!selectedText) {
     return;
   }
-  let uriText = encodeURI(selectedText);
-  let googleSearchCfg = vscode.workspace.getConfiguration(CFG_SECTION);
+  const uriText = encodeURI(selectedText);
+  const googleSearchCfg = vscode.workspace.getConfiguration(CFG_SECTION);
   const queryTemplate = googleSearchCfg.get(CFG_QUERY);
-  let query = queryTemplate.replace("%SELECTION%", uriText);
+  const query = queryTemplate.replace("%SELECTION%", uriText);
   vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(query));
 }
 
-//GetSelectedText creates a URL for search based on the selection
-function GetSelectedText() {
+//getSelectedText creates a URL for search based on the selection
+function getSelectedText() {
   const documentText = vscode.window.activeTextEditor.document.getText();
   if (!documentText) {
     return "";
   }
-  let activeSelection = vscode.window.activeTextEditor.selection;
+  const activeSelection = vscode.window.activeTextEditor.selection;
   if (activeSelection.isEmpty) {
     return "";
   }
@@ -50,6 +50,5 @@ function GetSelectedText() {
   );
 
   let selectedText = documentText.slice(selStartoffset, selEndOffset).trim();
-  selectedText = selectedText.replace(/\s\s+/g, " ");
-  return selectedText;
+  return selectedText.replace(/\s\s+/g, " ");
 }
