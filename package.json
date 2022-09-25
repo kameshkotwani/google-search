@@ -20,6 +20,9 @@
   "categories": [
     "Other"
   ],
+  "extensionKind": [
+    "ui"
+  ],
   "activationEvents": [
     "onCommand:extension.googleSearch"
   ],
