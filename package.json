@@ -2,7 +2,7 @@
   "name": "google-search",
   "displayName": "google-search",
   "description": "Google your doubts, errors and confusions!",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "kameshkotwani",
   "engines": {
     "vscode": "^1.31.0"
@@ -19,6 +19,9 @@
   },
   "categories": [
     "Other"
+  ],
+  "extensionKind": [
+    "ui"
   ],
   "activationEvents": [
     "onCommand:extension.googleSearch"
@@ -53,6 +56,7 @@
     }
   },
   "scripts": {
+    "package": "node ./node_modules/@vscode/vsce/vsce package --skip-license",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
@@ -61,6 +65,7 @@
     "vscode": "^1.1.28",
     "eslint": "^5.13.0",
     "@types/node": "^10.12.21",
+    "@vscode/vsce": "^2.31.1",
     "@types/mocha": "^2.2.42"
   }
 }
